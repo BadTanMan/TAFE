@@ -1,0 +1,55 @@
+//Created by Callum Buchanan 29/02/2016
+
+//Methods: + void main(String[] args)
+
+//Classes: Java.util.scanner
+
+package callum.sconverter;
+
+import java.util.Scanner;
+
+
+public class CallumSConverter 
+{
+
+    public static void main(String[] args) 
+    {
+        //Select conversion type or exit
+        int callum_variable;
+           
+        Scanner num=new Scanner(System.in);
+        
+        do
+        {
+            System.out.println("Enter 1 for Cm to Inch, 2 for Meters to Ft, 3 to EXIT: ");    
+            callum_variable = num.nextInt();
+        
+            switch(callum_variable)
+            {
+
+            //Press 1 for Centimeters to Inches
+                 case 1:
+                    Scanner cm = new Scanner(System.in);
+                    System.out.println("Enter centimeters: ");
+                    double Centimeters = cm.nextDouble();
+                    double Inches = Math.round( (Centimeters / 2.45) * 100) /100.0;
+                    System.out.println(Inches +" Inches");
+                    break;
+
+
+            //Press 2 for Meters to Feet
+                 case 2:
+                    Scanner m = new Scanner(System.in);
+                    System.out.println("Enter meters:  ");
+                    double Meters = m.nextDouble();
+                    double Feet = (  (Meters * 3.28084) );
+                    System.out.println(Feet +" Feet");
+                    break;
+            }
+
+
+        }while (callum_variable !=3);
+    }
+}
+
+
